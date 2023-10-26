@@ -1,0 +1,24 @@
+<%- include("../templates/encabezado") %>
+<%- include("../templates/menu") %>
+
+<div class="container">
+    <form action="/producto/editarProducto" method="post" enctype="multipart/form-data>
+        <div class="card">
+            <div class="card-header">
+                <h1>Editar Producto</h1>
+            </div>
+            <div class="card-body">
+                <input class="form-control mb-3" type="hidden" name="id" id="id" value="<%= prod.id %>">
+                <input class="form-control mb-3" type="text"name="nombre" id="nombre" value="<%= prod.nombre %>">
+                <input class="form-control mb-3" type="text"name="cantidad" id="cantidad" value="<%= prod.cantidad%>"> 
+                <input class="form-control mb-3" type="text"name="precio" id="precio" value="<%= prod.precio %>">
+                <input class="form-control mb-3" type="file"name="foto" id="foto" placeholder="Selecciona tu foto" >
+
+            </div>
+            <div class="card-footer">
+                 <button class="btn btn-primary mb-3" type="submit">Editar Producto</button>
+                    <button class="btn btn-secondary" type="reset">Limpia Campos</button>  
+            </div>
+        </div>
+    </form>
+</div>
